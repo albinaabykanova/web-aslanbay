@@ -11,7 +11,7 @@
 --sat: 0%;
 --title-color: hsl(var(--hue), var(--sat), 20%);
 --title-color-dark: hsl(var(--hue), var(--sat), 0%);
---text-color-dark: hsl(var(--hue), var(--sat), 46%);
+--text-color: hsl(var(--hue), var(--sat), 46%);
 --body-color: hsl(var(--hue), var(--sat), 98%);
 --container-color: #fff;
 
@@ -168,7 +168,6 @@ img {
 }
 
 
-
 /* BREAKPOİNTS */
 /* for large devices */
 @media screen and (max-width: 992px) {
@@ -176,11 +175,29 @@ img {
     margin-left: var(--mb-1-5);
     margin-right: var(--mb-1-5);
    }
+
+   .button {
+      padding: 1rem 1.75rem;
+   }
+
+   .button__icon {
+    width: 22px;
+    height: 22px;
+   }
 }
 
 /* for medium devices */
 @media screen and (max-width: 768px) {
-  
+  body {
+    margin: 0 0 var(--header-height);
+  }
+   .section {
+     padding: 2rem 0 4rem;
+   }
+
+   .section__subtitle {
+      margin-bottom: var(--mb-3);
+   }
 }
 
 @media screen and (max-width: 576px) {
@@ -188,6 +205,9 @@ img {
 }
 /* for small devices */
 @media screen and (max-width: 350px) {
+  :root {
+    --big-font-size: 2.25rem;
+  }
   .container {
     margin-left: var(--mb-1);
     margin-right: var(--mb-1);
