@@ -29,7 +29,7 @@
     color: var(--title-color-dark);
 }
 
-.qualification__section {
+.qualification__sections {
     display: grid;
     grid-template-columns: 0.5fr;
     justify-content: center;
@@ -60,7 +60,7 @@
     margin-bottom: var(--mb-1);
 }
 
-.qualification__calendar {
+.qualification__calendar{
     font-size: var(--small-font-size);
 }
 
@@ -68,7 +68,7 @@
     display: inline-block;
     width: 13px;
     height: 13px;
-    border-color: var(--tetx-color);
+    background-color: var(--text-color);
     border-radius: 50%;
 }
 
@@ -76,6 +76,6 @@
     display: block;
     width: 1px;
     height: 100%;
-    background-color: var(--tetx-color);
+    background-color: var(--text-color);
     transform: translate(6px, -7px);
 }
