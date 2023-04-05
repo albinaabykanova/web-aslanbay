@@ -2,8 +2,18 @@ import React, { useState } from "react";
 import "./header.css";
 
 const Header = () => {
+   /*========== Change Backround Header ============== */
+   window.addEventListener("scroll", function () {
+      const header = document.querySelector(".header");
+      // when the scroll-header is higher than 200 viewport height, add the show-scroll class to a tag with the hedare tag
+      if (this.scrollY >= 80) header.classList.add("scroll-header");
+      else header.classList.remove("scroll-header")
+  });
+
+
 /*========== Toggle ============== */
     const[Toggle, showMenu] = useState(false);
+    const [activeNav, setActiveNav ] = useState("#home");
 
     return (
       <header className="header">
@@ -16,7 +26,8 @@ const Header = () => {
              "nav__menu"}>
                 <ul className="nav__list grid">
                     <li className="nav__item">
-                       <a href="#home" className="nav__link active-link">
+                       <a href="#home" onClick={() => setActiveNav('#home')} 
+                       className={setActiveNav === "#home" ? "nav__link active-link"  : "nav__link"}>
                          <i className="uil uil-estate nav__icon"></i> Home
                        </a>
                     </li>
